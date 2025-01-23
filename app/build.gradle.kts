@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "ng.com.sirteefyapps.sirteefymovies"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "ng.com.sirteefyapps.sirteefymovies"
