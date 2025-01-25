@@ -18,10 +18,19 @@ import androidx.compose.ui.unit.dp
 import ng.com.sirteefyapps.sirteefymovies.ui.theme.HorizontalSpacing
 
 @Composable
-fun MovieCard(movieName: String) {
-    Card(modifier = Modifier.padding(10.dp).fillMaxWidth().height(100.dp)) {
-        Row(modifier = Modifier.padding(10.dp),verticalAlignment = Alignment.CenterVertically,) {
-            Surface(modifier = Modifier.padding(10.dp).height(50.dp).width(50.dp)) {
+fun MovieCard(movieName: String, onItemClick: () -> Unit = {}) {
+    Card(modifier = Modifier
+        .fillMaxWidth()
+        .padding(top = 5.dp, bottom = 5.dp)
+        .height(100.dp)
+    ) {
+        Row(modifier = Modifier.padding(10.dp), verticalAlignment = Alignment.CenterVertically) {
+            Surface(modifier = Modifier
+                .padding(10.dp)
+                .height(80.dp)
+                .width(70.dp),
+                onClick = onItemClick
+            ) {
                 Icon(
                     imageVector = Icons.Default.Person,
                     contentDescription = "Movie Icon"
